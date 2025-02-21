@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Agendamentos</title>
+    <link rel="shortcut icon" href="imagens/Fotos profissionais/Icone.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="background-image: url('imagens/Fotos\ profissionais/fundo contato.png')";>
+        <div class= "navbar">
+            <nav>
+                <a href="site.html">
+                    <img src="./imagens/Fotos profissionais/Icone.png" alt="Logo Prime">
+                </a>            
+                <ul class = "ul">
+                    <li><a href="site.html">Inicio</a></li>
+                    <li><a href="Serviços.html">Procedimentos</a></li>
+                    <li><a href="Sobrenos.html">Sobre nós</a></li>
+                    <li><a class="btn" href="Contato.html">Contato</a></li>
+                    <li><button id="login-button">Login</button></li>
+                    <li><button id="register-button">Registrar</button></li>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1> Horarios </h1>
+                    <p>
+                        Agende seu proprio horário!
+                </div>
+            </section>
+        </div>
+    </header>
+        <div class="calendar-section">
+            <div class="container">
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Login</h2>
+                    <form id="login-form">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                    <p>Não tem uma conta? <a href="#" id="switch-to-register">Registre-se</a></p>
+                </div>
+            </div>
+            <!-- Mini-tela de Registro -->
+            <div id="register-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Registro</h2>
+                    <form id="register-form">
+                        <label for="reg-username">Usuário:</label>
+                        <input type="text" id="reg-username" name="username" required>
+                        <label for="reg-password">Senha:</label>
+                        <input type="password" id="reg-password" name="password" required>
+                        <button type="submit">Registrar</button>
+                    </form>
+                    <p>Já tem uma conta? <a href="#" id="switch-to-login">Faça login</a></p>
+                </div>
+            </div>
+            <h1>Calendário de Agendamentos</h1>
+            <div class="main-content">
+                <div id="calendar"></div>
+                <div id="time-slots" class="hidden">
+                    <h2>Horários Disponíveis</h2>
+                    <div id="times"></div>
+                </div>
+                <div id="form-container" class="hidden">
+                    <h2>Agendar Horário</h2>
+                    <form id="appointment-form">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required>
+                        <label for="phone">Telefone:</label>
+                        <input type="text" id="phone" name="phone" required>
+                        <button type="submit">Agendar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    <footer class="footer">
+        <div class="footer-bar">
+            <div class="links">
+                <a href="https://www.instagram.com/prime.esteticaitabira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/clinicadeesteticaprime"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5531999033628"> <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+            <p class="text-footer"> 2024 Projeto Desenvolve Itabira</p>
+        </div>
+    </footer>
+
+    <script src="script-calendario.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Estética Prime</title>
+    <link rel="stylesheet" href="styleinicio.css">
+    <link rel="shortcut icon" href="imagens/Fotos profissionais/Icone.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header style="background-image: url('imagens/Fotos\ profissionais/fundo inicio.png')" ;>
+        <div class= "navbar">
+            <nav>
+                <a href="site.html">
+                    <img src="./imagens/Fotos profissionais/Icone.png" alt="Logo Prime">
+                </a>            
+                <ul class = "ul">
+                    <li><a href="site.html">Inicio</a></li>
+                    <li><a href="Serviços.html">Serviços</a></li>
+                    <li><a href="Galeria.html">Galeria</a></li>
+                    <li><a href="Sobrenos.html">Sobre nós</a></li>
+                    <li><a class="btn" href="Contato.html">Contato</a></li>
+                    <div class="close-icon" onclick="closeMenu()">
+                    <i class="fa-solid fa-square-xmark"></i>
+                    </div>
+                    <div id="buttonContainer"></div>
+                    <a href="./calendario.html" class="btn-hora"><button id="loginButton" class="btn">Horarios</button></a>
+
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1> CONTATO </h1>
+                    <p>
+                        Entre em contato conosco e agende seu horário!
+                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=5531999033628" class="btn">QUERO AGENDAR MINHA AVALIAÇÃO</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="carrossel">
+        <div id="loginOverlay" class="login-overlay">
+            <div class="login-form">
+                <h2>Login</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="button-group">
+                    <button id="submitLogin" class="submit-button">Login</button>
+                    <button id="cancelLogin" class="cancel-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoimentos">
+        <div class="navbar">
+            <h3> NOSSOS DEPOIMENTOS</h3>
+            <p>
+                Veja o que nossos clientes dizem sobre nós
+            </p>
+            <div class="cards">
+                <div class="cards">
+                    <div class="card-item">
+                        <p class="nome-user">
+                            Elenice Fernandes
+                        </p>
+                        <p class="depoimento-user">
+                            A melhor experiência possível!
+                            Atendimento com excelência e muito carinho. Profissionais experientes, dedicados e
+                            atenciosos.
+                            Passam segurança nos atendimentos. Super recomendo!!!
+                        </p>
+                        <div class="estrelas"></div>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                    <div class="card-item">
+                        <p class="nome-user">
+                            Marina Duarte
+                        </p>
+                        <p class="depoimento-user">
+                            Extremamente satisfeita com a experiência que tive com a Prime! Equipe dedicada,
+                            excelente atendimento ao cliente e produtos/serviços de alta qualidade. Recomendo a todos
+                            que estejam em
+                            busca de excelência. Parabéns à equipe pelo ótimo trabalho!
+                        </p>
+                        <div class="estrelas"></div>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+
+                    <div class="card-item">
+                        <p class="nome-user">
+                            Patricia Alexandre
+                        </p>
+                        <p class="depoimento-user">
+                            Sem palavras para descrever o atendimento e profissionalismo Do Dr. Samyr e da Dr. Ana
+                            Carolina!!
+                            Excelentes profissionais,fui muito bem atendida e bem instruída qto as dúvidas que
+                            tive!Estão de parabéns pela clínica.
+                            Deus continue abençoando o trabalho de vcs! ❤️🙏🏽
+                        </p>
+                        <div class="estrelas"></div>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+
+                    <div class="card-item">
+                        <p class="nome-user">
+                            Lucas Melo
+                        </p>
+                        <p class="depoimento-user">
+                        </p>
+                        <p class="depoimento-user">
+                            Só tenho a agradecer a clínica Prime pelo atendimento e profissionalismo excepcional,
+                            pensei que que iria doer pois nunca havia feito, achei super tranquilo e já estou ansioso
+                            para a próxima sessão, muito obrigado! 😁😁
+                        </p>
+                        <div class="estrelas"></div>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+
+                    <div class="card-item">
+                        <p class="nome-user">
+                            Priscilla Carla Tomaz Silva
+                        </p>
+                        <p class="depoimento-user">
+                            Amei a recepção da Carolina e do Samir, superaram minha expectativa e o melhor é que eu não
+                            senti dor alguma como eu temia,
+                            a Carolina explica tudo antes em cada procedimento que faz, isso me passou muita confiança e
+                            conforto.
+                        </p>
+                        <div class="estrelas"></div>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                </div>
+    </section>
+
+    <footer class="footer">
+        <div class="navbar">
+            <div class="links">
+                <a
+                    href="https://www.instagram.com/prime.esteticaitabira?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/clinicadeesteticaprime"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5531999033628"> <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+            <p> 2024 Projeto Desenvolve Itabira</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 26px;
+}
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+nav ul a {
+    color: #ffffff;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    outline: none;
+}
+section, footer {
+    padding: 54px 0;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text {
+    margin: 100px 0 70px;
+    text-align: center;
+}
+.banner .banner-text p {
+    font-size: 40px;
+    color: white;
+    font-weight: lighter;
+    margin: 20px 0;
+    padding-bottom: 30px;
+}
+.banner .banner-text h1 {
+    font-size: 80px;
+    color: white;
+}
+.banner .banner-text p {
+    font-size: 40px;
+    color: white;
+    font-weight: lighter;
+    margin: 20px 0;
+    padding-bottom: 30px;
+}
+#login-button, #register-button {
+    padding: 8px 16px;
+    background-color: #c3aa5e;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.1s;
+    text-transform: uppercase;
+    margin: 0 25px;
+}
+
+#login-button:hover, #register-button:hover {
+    background-color: #e0c984;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    text-align: center;
+}
+.calendar-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    padding: 4% 1% 4% 1%;
+}
+
+.calendar-section h1 {
+    padding: 2%;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#calendar {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+#time-slots {
+    flex: 1;
+    max-width: 200px;
+}
+.time {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.time:hover {
+    background-color: #f0f0f0;
+}
+
+#form-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Oculta as mini-telas por padrão */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex; /* Exibe a mini-tela quando a classe "active" é adicionada */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input:hover{
+    background-color: #f0f0f0;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    background-color: #28a745;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#switch-to-register, #switch-to-login {
+    color: #28a745;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#switch-to-register:hover, #switch-to-login:hover {
+    text-decoration: underline;
+}
+section, footer {
+    padding: 54px 0;
+}
+.footer {
+    background-color: #c0a144eb;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+.text-footer {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer i {
+    color: #c0a144eb;
+    font-size: 16px;
+    background-color: white;
+    padding: 14px;
+    margin: 4px;
+    border-radius: 10px;
+}
+.footer i::before{
+    color: #c0a144eb;
+    font-size: 16px;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+}
+.fa-brands, .fab {
+    font-weight: 400;
+}
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+.footer-bar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+}
+.fa-bars:before, .fa-navicon:before {
+    content: "\f0c9";
+}
+.fa-square-xmark:before, .fa-times-square:before, .fa-xmark-square:before {
+    content: "\f2d3";
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+@media (max-width: 830px) {
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #203140;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.8s;
+    }
+
+    .ul.open {
+        clip-path: circle(141.4% at 100% 0);
+    }
+
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 63px;
+        right: 36px;
+    }
+    #calendar {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 5px;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 800px;
+        text-align: center;
+    }
+    .calendar-section {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        padding: 4% 1% 4% 1%;
+    }
+    .calendar-section h1{
+        padding: 2%;
+        font-size: x-large;
+    }
+        
+    .day {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .day:hover {
+        background-color: #f0f0f0;
+    }
+
+    #time-slots {
+        flex: 1;
+        max-width: 200px;
+    }
+    .time {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .time:hover {
+        background-color: #f0f0f0;
+    }
+
+    #form-container {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .main-content {
+        display: grid;
+        gap: 20px;
+        justify-content:center;
+        justify-items: center;
+    }
+
+    .cards {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .depoimentos .card-item {
+        width: 100%;
+    }
+
+    .sobre .sobre-text {
+        margin-top: 40px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .sobre .navbar {
+        flex-direction: column;
+    }
+
+    .sobre .sobre-text h3 {
+        font-size: 48px;
+    }
+
+    .sobre .sobre-text,
+    .sobre .sobre-imag {
+        width: 100%;
+    }
+
+    .banner .banner-text {
+        padding: 0;
+        margin: 50px 10px 70px;
+    }
+
+    .banner .banner-text h1 {
+        font-size: 100px;
+    }
+
+    .banner .banner-text p {
+        font-size: 22px;
+    }
+
+    .serviços .item {
+        width: 100%;
+    }
+
+    .contato .contato-info {
+        flex-direction: column-reverse;
+    }
+
+    .contato-info .right-side,
+    .contato-info .left-side {
+        width: 100%;
+    }
+
+    .contato-info .right-side {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner .banner-text h1 {
+        font-size: 50px;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+    }
+
+}
